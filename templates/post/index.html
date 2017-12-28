@@ -1,0 +1,12 @@
+{% extends "home.html" %}
+    {% block title %}
+        Post's - {{ block.super }}
+    {% endblock %}
+{% block body %}
+    {% for post in posts %}
+        {{ post.id }}<br>
+        <a href="{% url "detail" post.id %}">{{ post.title }}</a><br>
+        {{ post.content }}<br>
+        {{ post.publish_date }}<br>
+    {% endfor %}
+{% endblock %}

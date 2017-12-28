@@ -1,0 +1,10 @@
+    {% extends "home.html" %}
+    {% block title %}
+        Post Detail - {{ block.super }}
+    {% endblock %}
+    {% block body %}
+        {{ post.id }}<br>
+        {{ post.title }}<br>
+        {{ post.content }}<br>
+        {{ post.publish_date }}<br>
+    {% endblock %}
